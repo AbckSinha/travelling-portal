@@ -1,0 +1,114 @@
+<div class="center">
+  <form [formGroup]="flightForm">
+    <div class="flex-container1">
+      <fieldset>
+        <legend>Departure</legend>
+        <input class="input" type="text" placeholder="Airport or city" formControlName="departure" />
+      </fieldset>
+      <fieldset>
+        <legend>Destination</legend>
+        <input class="input" placeholder="Airport or city" type="text" formControlName="destination" />
+      </fieldset>
+    </div>
+
+    <div class="flex-container2">
+      <fieldset class="width-50">
+        <legend>Depart date</legend>
+        <input class="input1" type="date" formControlName="departDate">
+      </fieldset>
+      <fieldset class="width-50">
+        <legend>Return date</legend>
+        <input class="input1" type="date" formControlName="returnDate">
+       
+      </fieldset>
+    </div>
+    <div class="flex-container2">
+      <fieldset class="width-50">
+        <legend>Travellers</legend>
+        <select formControlName="travellers" name="country">
+          <option *ngFor="let count of travellerCount" [value]="count.value">{{count.name}}</option>
+        </select>
+     
+      </fieldset>
+
+      <fieldset class="width-50">
+        <legend>Class</legend>
+        <select formControlName="class" name="country">
+          <option selected="selected" value="economy">Economy</option>
+          <option value="business">Business</option>
+        </select>
+        
+      </fieldset>
+    </div>
+    <div class="flex-container1 mt-2 ">
+      <button class="search-btn" (click)="search()">Search flights</button>
+    </div>
+  </form>
+
+
+
+  <div class="results-container mt-2">
+    <div *ngIf="flights && flights.length > 0" class="navbar mb-2">
+      <div class="dropdown">
+        <button class="dropbtn">Sort
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Price(Lowest to Highest)</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Price(Highest to Lowest)</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Duration(Shortest to Longest)</label><br>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Duration(Longest to Shortest)</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Departure(Earliest to Latest)</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Departure(Latest to Earliest )</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Arrival(Earliest to Latest)</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Airline(A to Z )</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Airline( Z to A )</label><br>
+          <div class="mt-2 mb-2 ">
+            <button class="done"> Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Filter
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="results" *ngFor='let flight of flights'>
+      <div><i class="material-icons">flight</i> {{flight.airline_name}}</div>
+      <div class="time-container mt-2">
+        <div class="width-50">{{flight.departure_time}}</div>
+        <div class="width-50">{{flight.arrival_time}}</div>
+      </div>
+      <div class="time-container">
+        <div class="width-50">{{flight.departure_city}}</div>
+        <div class="width-50">{{flight.arrival_city}}</div>
+      </div>
+      <div class="price-container mt-2">
+        <div *ngFor="let price of flight.prices">
+          <div class="btn">
+            <span class="mr-2">{{price.class_name}} - {{price.prices}}</span><br>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

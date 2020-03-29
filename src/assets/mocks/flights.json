@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "airline_name": "British Airways",
+        "departure_time": "02:30am",
+        "arrival_time": "04:50am",
+        "stops": 1,
+        "departure_city": "Del",
+        "arrival_city": "Goa",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "2200"
+        },
+        {
+            "class_name": "Business",
+            "prices": "3200"
+        }]
+    },
+    {
+        "id": 2,
+        "airline_name": "Air France",
+        "departure_time": "02:30am",
+        "arrival_time": "09:30am",
+        "stops": 1,
+        "departure_city": "Hyd",
+        "arrival_city": "Pat",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "6200"
+        },
+        {
+            "class_name": "Business",
+            "prices": "8200"
+        }]
+    },
+    {
+        "id": 2,
+        "airline_name": "Sri Lankan",
+        "departure_time": "09:40am",
+        "arrival_time": "12:45pm",
+        "stops": 1,
+        "departure_city": "LGF",
+        "arrival_city": "KPT",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "3200"
+        },
+        {
+            "class_name": "Business",
+            "prices": "9200"
+        }]
+    },
+    {
+        "id": 3,
+        "airline_name": "British Airways",
+        "departure_time": "12:45pm",
+        "arrival_time": "02:45pm",
+        "stops": 1,
+        "departure_city": "TUP",
+        "arrival_city": "HUP",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "3200"
+        },
+        {
+            "class_name": "Business",
+            "prices": "9200"
+        }]
+    },
+    {
+        "id": 4,
+        "airline_name": "British Airways",
+        "departure_time": "02:30am",
+        "arrival_time": "04:50am",
+        "stops": 1,
+        "departure_city": "Del",
+        "arrival_city": "Goa",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "5200"
+        },
+        {
+            "class_name": "Busines",
+            "prices": "6200"
+        }]
+    },
+    {
+        "id": 5,
+        "airline_name": "Air France",
+        "departure_time": "02:30am",
+        "arrival_time": "02:30am",
+        "stops": 1,
+        "departure_city": "Hyd",
+        "arrival_city": "Pat",
+        "prices": [{
+            "class_name": "Economy",
+            "prices": "6200"
+        },
+        {
+            "class_name": "Business",
+            "prices": "8200"
+        }]
+    }
+]
